@@ -2,11 +2,27 @@
   "name": "gestao-estoque",
   "version": "1.0.0",
   "description": "Projeto Integrador I",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "lint": "eslint --ext .js -f ./node_modules/eslint-friendly-formatter . --fix",
+    "prepush": "npm run lint",
+    "start": "node server.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e-0a/gestao-estoque.git"
+  },
+  "keywords": [
+    "nodejs",
+    "api",
+    "crud",
+    "express",
+    "github-actions",
+    "serverless",
+    "javascript",
+    "mysql"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
@@ -20,6 +36,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "eslint-friendly-formatter": "^4.0.1",
     "express": "^4.19.2",
     "express-promise-router": "^4.1.1",
     "pg": "^8.11.5"
